@@ -40,11 +40,10 @@
                     document.getElementById('currency').value = data.currency;
                     document.getElementById('code').value = data.code;
 
-                    
                     document.getElementById('table').value = data.rates[0].no;
                     document.getElementById('rate').value = data.rates[0].mid;
                     document.getElementById('effectiveDate').value = data.rates[0].effectiveDate;
-                    output.textContent = JSON.stringify(data, null, 2); // Update with response
+                    output.textContent = JSON.stringify(data, null, 2);
                 })
                 .catch(error => {
                     console.error('Error:', error);

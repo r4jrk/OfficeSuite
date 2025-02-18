@@ -1,4 +1,4 @@
-package com.r4jrk.exchangerates;
+package com.r4jrk.r4officesuite;
 
 import java.util.List;
 

@@ -1,9 +1,12 @@
-package com.r4jrk.exchangerates;
+package com.r4jrk.r4officesuite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//TODO: Add Swagger, Add cachowanie w mongodb (ale też w springu kalkulacje), Add reklamy, Add sugestie featurów, Add kontakt, Add legal,
+//TODO: Add Swagger, Add cachowanie w mongodb (ale też w springu kalkulacje),
+//Add reklamy, Add sugestie featurów, Add kontakt, Add legal, Add download standalone apek,
+//Add async web client, add nginx
+///docker-compose
 // Add drukowanie (optional, możę kiedyś)
 
 // package com.github.gdl;

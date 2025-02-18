@@ -8,7 +8,7 @@ RUN set -eux \
     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf \
     && CORRETO_TEMP=$(mktemp -d) \
     && pushd ${CORRETO_TEMP} \
-    && RPM_LIST=("java-23-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-23-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-23-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-23-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm") \
+    && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm") \
     && for rpm in ${RPM_LIST[@]}; do \
     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm} \
     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1; \
@@ -21,12 +21,12 @@ RUN set -eux \
     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
 
 ENV LANG=C.UTF-8
-ENV JAVA_HOME=/usr/lib/jvm/java-23-amazon-corretto
+ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 
-RUN mkdir /exchange-rates-web
+RUN mkdir /r4officesuite
 
-WORKDIR /exchange-rates-web
+WORKDIR /r4officesuite
 
-COPY target/exchange-rates-0.0.1-SNAPSHOT.jar /exchange-rates-web
+COPY target/exchange-rates-0.0.1-SNAPSHOT.jar /r4officesuite
 
-CMD ["java","-jar","/exchange-rates-web/exchange-rates-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","/r4officesuite/r4officesuite-0.0.1-SNAPSHOT.jar"]
