@@ -13,7 +13,7 @@
 
 	<groupId>com.r4jrk</groupId>
 	<artifactId>r4officesuite</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version></version>
 	<name>r4officesuite</name>
 	<description>R4&apos;s Office Suite. Built with Spring Boot and React.</description>
 
@@ -44,10 +44,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
-		</dependency> -->
+		</dependency>
 	</dependencies>
 
 	<build>

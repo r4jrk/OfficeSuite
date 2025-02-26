@@ -2,8 +2,11 @@ package com.r4jrk.r4officesuite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
-//TODO: Add Swagger, Add cachowanie w mongodb (ale też w springu kalkulacje),
+//TODO: Add Swagger, Add cachowanie w mongodb (ale też w springu kalkulacje) - czy może pobierać dane dla wszystkich walut 
+//i zapisywać w bazie, a potem tylko pobierać z bazy?
+//Add swagger, jUnit testys
 //Add reklamy, Add sugestie featurów, Add kontakt, Add legal, Add download standalone apek,
 //Add async web client, add nginx
 ///docker-compose
